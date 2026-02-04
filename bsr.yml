@@ -1,0 +1,14 @@
+name = python code
+on :[push]
+  jobs:
+    test:
+	 runs on :ubuntu-latest
+	 steps:
+	  -name : checkout code
+	  user:actions/checkout@v4
+	  -name :setup python
+	  user:actions/setup-python@v5
+	  with:
+	   pyython version:"3.10"
+	   #on :[push]-when the code runs correctly
+	   #jobs:-defines work
